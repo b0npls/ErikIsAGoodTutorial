@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player1
+  - Player2
   - 
   - 
   - 
@@ -43,6 +43,7 @@ TagManager:
     locked: 0
   - name: Not Default - lol
     uniqueID: 2373897095
+    locked: 0
   - name: Player
     uniqueID: 885632287
     locked: 0
