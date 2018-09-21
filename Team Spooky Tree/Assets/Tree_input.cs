@@ -5,6 +5,11 @@ using System;
 using UnityEngine;
 
 public class Tree_input : MonoBehaviour {
+
+	public float speed = 10f;
+
+	private Rigidbody2D rb2d;
+
 	bool rightMoving;
 	bool leftMoving;
 	bool jumping;
@@ -13,7 +18,7 @@ public class Tree_input : MonoBehaviour {
 	
 	const float floor_base = 0;
 	const float fall_step = 0.08f;
-	const float jump_step = 0.1f;
+	const float jump_step = 2f;
 	const float move_step = 0.1f;
 	
 	private struct Controls {
@@ -31,17 +36,22 @@ public class Tree_input : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+		rb2d = GetComponent<Rigidbody2D> ();
+
 		leftMoving = false ;
 		rightMoving = false ;
 		jumping = false ;
 	}
-	
+
+	void FixedUpdate () {
+		float moveHorizontal = Input.GetAxis ("HorizP1");
+	}
 	// Update is called once per frame
 	void Update () {
-		anim.ResetTrigger("attackButton");
+		//anim.ResetTrigger("attack");
 		if (Input.GetKeyDown(controls.attack))
 		{
-			anim.SetTrigger("attackButton");
+			anim.SetTrigger("attack");
 		}
 		//Basically, if you're holding down one direction and you press another, you switch to moving in the new direction
         //if you release that new direction and you're still holding the old one, you should switch back
@@ -88,14 +98,13 @@ public class Tree_input : MonoBehaviour {
             anim.SetBool("move_left", false);
         }
 		
-		if (Input.GetKey(controls.jump)) {
+		if (Input.GetKey(controls.jump) && jumping == false) {
 			jumping = true;
 			anim.SetBool("jump", true);
 			transform.position = new Vector3(transform.position.x, transform.position.y + jump_step);
 		}
 		else {
-			jumping = false;
-			anim.SetBool("jump", false);
+			//anim.SetBool("jump", false);
 			float y_temp = transform.position.y - fall_step;
 			y_temp = Math.Max(floor_base,  y_temp);
 			transform.position = new Vector3(transform.position.x, y_temp);

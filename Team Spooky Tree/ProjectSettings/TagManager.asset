@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player1
+  - Player2
+  - AttackP1
+  - AttackP2
+  - HitP1
+  - HitP2
   layers:
   - Default
   - TransparentFX
@@ -13,6 +19,7 @@ TagManager:
   - UI
   - 
   - 
+  - ground
   - 
   - 
   - 
@@ -31,18 +38,18 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - andy1
+  - andy2
+  - andy3
+  - andy4
+  - andy5
   m_SortingLayers:
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Not Default - lol
     uniqueID: 2373897095
+    locked: 0
   - name: Player
     uniqueID: 885632287
     locked: 0
