@@ -12,17 +12,24 @@ that selection should cause the correct String Names to be put into the variable
 
 public class BonMover : MonoBehaviour {
 
+	public string xMove, yMove, attack1, attack2, attack3, attack4;
+	public float jumpForce = 100f;
 
-	private  bool rightMoving = false;
+	private bool rightMoving = false;
 	private bool leftMoving = false;
 	private bool allowedToMove = true;	// Bool to set false during some attacks
+	private float jumpDelay = 0.5f;
+	private float timeSinceLastJump;
     private Animator anim;
+    private Jumper jumpScr;
 	
 	void Start () {
         anim = GetComponent<Animator>();
+        jumpScr = GetComponentInChildren<Jumper>();
 	}
 
 	void Update () {
+		timeSinceLastJump += Time.deltaTime;
 		//anim.ResetTrigger("attack1");
 		Attacks();
         
@@ -61,7 +68,18 @@ public class BonMover : MonoBehaviour {
             leftMoving = false;
             anim.SetBool("isWalkingBackward", false);
         }
+
+        if (Input.GetButtonDown(yMove)){
+        	if (Input.GetAxis(yMove) > 0){
+        		if (timeSinceLastJump > jumpDelay){
+        			jumpScr.isJumping = true;
+        			timeSinceLastJump = 0f;
+        		}
+        	}
+        }
     }
+
+  
 
     public void StayStill (){
 		allowedToMove = false;
@@ -76,25 +94,28 @@ public class BonMover : MonoBehaviour {
 		anim.ResetTrigger("attack2");
 		anim.ResetTrigger("attack3");
 		anim.ResetTrigger("attack4");
-		if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetButtonDown(attack1))
         {
             anim.SetTrigger("attack1");
         }
-		if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetButtonDown(attack2))
         {
             anim.SetTrigger("attack2");
         }
-		if (Input.GetKeyDown(KeyCode.R))
+		if (Input.GetButtonDown(attack3))
         {
         	// Movement needs to be disabled during. Perhaps a bool to set false?
             anim.SetTrigger("attack3");
         }
-		if (Input.GetKeyDown(KeyCode.F))
+		if (Input.GetButtonDown(attack4))
         {
             anim.SetTrigger("attack4");
         }
 		
-
     }
 
-}
+    public void Jumperino(){
+    	jumpScr.MakeJump(jumpForce);
+    }
+
+ }
