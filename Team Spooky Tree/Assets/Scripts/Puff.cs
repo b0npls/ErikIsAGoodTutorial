@@ -25,7 +25,25 @@ public class Puff : MonoBehaviour {
     {
         if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-
+			Destroy (this);
         }
     }
+	void OnTriggerEnter2D(Collider2D collid){
+        Debug.Log("I'm triggered");
+		if (collid.gameObject.layer == LayerMask.NameToLayer("ground")) {
+			Debug.Log("dumb");
+			Destroy (gameObject);
+		} else if(collid.gameObject.tag != gameObject.tag)
+        {
+            Animator anim = collid.gameObject.GetComponentInParent<Animator>();
+            anim.SetInteger("hitstun", 50);
+            Destroy(gameObject);
+        }
+	}
+	void OnCollisionEnter(Collision collision){
+		if (true) {
+			return;
+		}
+	}
+    //Carolla
 }

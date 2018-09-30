@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -13,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - Player1
-  - Player2
-  - 
+  - ground
+  - Collision
+  - Attack
+  - Hurtbox
   - 
   - 
   - 

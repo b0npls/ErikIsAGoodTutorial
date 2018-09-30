@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 86af45acb0e2ba9409ea1223365b43fd
-timeCreated: 1534229148
+timeCreated: 1537084100
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,7 @@ TextureImporter:
     21300052: wispy_damage1
     21300054: wispy_damage2
     21300056: invis
+    21300058: wispy_hurt
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -519,7 +520,21 @@ TextureImporter:
         width: 25
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wispy_hurt
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 2
+        width: 32
+        height: 59
+      alignment: 9
+      pivot: {x: 0.723186, y: 0.41651714}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
