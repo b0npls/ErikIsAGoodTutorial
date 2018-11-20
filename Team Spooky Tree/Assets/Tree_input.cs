@@ -13,11 +13,12 @@ public class Tree_input : MonoBehaviour {
 	bool rightMoving;
 	bool leftMoving;
 	bool jumping;
+	bool crouching;
 	
 	Animator anim;
 	
 	const float floor_base = 0;
-	const float fall_step = 0.08f;
+	const float fall_step = 1f;
 	const float jump_step = 2f;
 	const float move_step = 0.1f;
 	
@@ -31,7 +32,7 @@ public class Tree_input : MonoBehaviour {
 		  crouch = crouch_in;
 		}
 	}
-	Controls controls = new Controls(KeyCode.RightArrow, KeyCode.LeftArrow, KeyCode.UpArrow, KeyCode.RightControl, KeyCode.RightShift);
+	Controls controls = new Controls(KeyCode.RightArrow, KeyCode.LeftArrow, KeyCode.UpArrow, KeyCode.RightControl, KeyCode.DownArrow);
 	
 	// Use this for initialization
 	void Start () {
@@ -41,6 +42,7 @@ public class Tree_input : MonoBehaviour {
 		leftMoving = false ;
 		rightMoving = false ;
 		jumping = false ;
+		crouching = false;
 	}
 
 	void FixedUpdate () {
@@ -48,10 +50,17 @@ public class Tree_input : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		//anim.ResetTrigger("attack");
 		if (Input.GetKeyDown(controls.attack))
 		{
 			anim.SetTrigger("attack");
+		}
+		if (Input.GetKey(controls.crouch)) {
+			//Debug.Log ("Crouching");
+			crouching = true;
+			anim.SetBool ("crouch", true);
+		} else {
+			//Debug.Log ("Not Crouching");
+			anim.SetBool ("crouch", false);
 		}
 		//Basically, if you're holding down one direction and you press another, you switch to moving in the new direction
         //if you release that new direction and you're still holding the old one, you should switch back
@@ -97,7 +106,7 @@ public class Tree_input : MonoBehaviour {
             leftMoving = false;
             anim.SetBool("move_left", false);
         }
-		
+		//need to redo jumping
 		if (Input.GetKey(controls.jump) && jumping == false) {
 			jumping = true;
 			anim.SetBool("jump", true);
