@@ -21,7 +21,7 @@ public class Tree_input : MonoBehaviour {
 	const float fall_step = 1f;
 	const float jump_step = 5f;
 	const float move_step = 0.1f;
-	Vector2 jumpHeight = new Vector2(0,30);
+	Vector2 jumpHeight = new Vector2(0,10);
 	
 	private struct Controls {
 		public KeyCode move_right, move_left, jump, attack, crouch;
@@ -107,29 +107,14 @@ public class Tree_input : MonoBehaviour {
             leftMoving = false;
             anim.SetBool("move_left", false);
         }
-		//need to redo jumping
 		if (Input.GetKey(controls.jump) && jumping == false) {
 			jumping = true;
 			anim.SetBool("jump", true);
-			//transform.position = new Vector3(transform.position.x, transform.position.y + jump_step);
 			rb2d.AddForce(jumpHeight, ForceMode2D.Impulse);
-
 		}
-/*		else {
-			//anim.SetBool("jump", false);
-			float y_temp = transform.position.y - fall_step;
-			y_temp = Math.Max(floor_base,  y_temp);
-			transform.position = new Vector3(transform.position.x, y_temp);
-		}
-		if (transform.position.y == floor_base) {
-			//if we are on the ground we aren't jumping
+		if (rb2d.velocity.y == 0) {
 			jumping = false;
-			anim.SetBool("jump", false);
+			anim.SetBool ("jump", false);
 		}
-		else {
-			//if we aren't on the ground we are jumping
-			jumping = true;
-			anim.SetBool("jump", true);
-		}*/	
 	}
 }
