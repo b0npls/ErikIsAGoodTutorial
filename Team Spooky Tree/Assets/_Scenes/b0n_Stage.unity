@@ -300,11 +300,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 50530540755516428, guid: 390e64b70d0d7b1418f3dd024a0a8f76,
-        type: 2}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 390e64b70d0d7b1418f3dd024a0a8f76, type: 2}
   m_IsPrefabParent: 0
@@ -805,6 +800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 6
+  upForce: 100
+  rightForce: 25
 --- !u!61 &333430223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1173,6 +1170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 2
+  upForce: 5
+  rightForce: 120
 --- !u!1 &1237654071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1393,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 2
+  upForce: 5
+  rightForce: 120
 --- !u!1 &1350054196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 10
+  upForce: 50
+  rightForce: 100
 --- !u!1 &1405083907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,6 +1666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 2
+  upForce: 5
+  rightForce: 120
 --- !u!1 &1553087867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,6 +1942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 2
+  upForce: 75
+  rightForce: 120
 --- !u!1 &1897746607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,6 +2151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 2
+  upForce: 5
+  rightForce: 120
 --- !u!1 &2011250848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,6 +2220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 5
+  upForce: 75
+  rightForce: 20
 --- !u!1 &2079392930
 GameObject:
   m_ObjectHideFlags: 0

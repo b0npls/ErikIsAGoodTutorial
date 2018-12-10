@@ -40,6 +40,6 @@ public class Jumper : MonoBehaviour {
 
 	private void Oucherino(){
     	anim.SetTrigger("ouch");
-    	rb2d.AddForce(new Vector3 (-150f,-200f), ForceMode2D.Force);
+    	//rb2d.AddForce(new Vector3 (-150f,-200f), ForceMode2D.Force);
     }
 }

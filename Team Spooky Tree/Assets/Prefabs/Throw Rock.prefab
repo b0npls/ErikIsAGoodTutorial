@@ -103,6 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 5
+  upForce: 100
+  rightForce: 10
 --- !u!212 &212947217001605734
 SpriteRenderer:
   m_ObjectHideFlags: 1

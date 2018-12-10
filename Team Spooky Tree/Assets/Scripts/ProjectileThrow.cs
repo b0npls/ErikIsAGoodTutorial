@@ -13,11 +13,7 @@ public class ProjectileThrow : MonoBehaviour {
 
 		rb.velocity = intVel;	
 	}
-	
 
-	void Update () {
-		
-	}
 
 	void OnCollisionEnter2D (Collision2D col){
 		Destroy (gameObject, 0.1f);
