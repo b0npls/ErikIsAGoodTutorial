@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// I should consider renaming this like "physics script" or something. It actually handles all physcis
 public class Jumper : MonoBehaviour {
 
 	private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
