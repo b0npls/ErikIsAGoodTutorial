@@ -8,8 +8,11 @@ public class WispyWoods : MonoBehaviour, DamageTaker {
     public Apple a;
     public string player;
     public float health = 100;
-	// Use this for initialization
-	void Start () {
+    private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
+
+    [HideInInspector] public bool isJumping = false;
+    // Use this for initialization
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity.Set(-1, 5);
 	}
@@ -36,15 +39,39 @@ public class WispyWoods : MonoBehaviour, DamageTaker {
         if (Input.GetButtonDown("Fire1" + player))
         {
             anim.SetTrigger("puffTrigger");
-        } else if(Input.GetButtonDown("Fire2"+player))
+        }
+        else if (Input.GetButtonDown("Fire2" + player))
         {
             anim.SetTrigger("spinTrigger");
-        }else if (Input.GetButtonDown("Fire3" + player))
+        }
+        else if (Input.GetButtonDown("Fire3" + player))
         {
             anim.SetTrigger("appleTrigger");
         }
+        else if (Input.GetButtonDown("Vert" + player) && Input.GetAxis("Vert" + player) > 0)
+        {
+            Vector2 mySpot = new Vector2(transform.position.x, transform.position.y - 0.8f);
 
-	}
+            // If on the ground and jump is pressed...
+            if (Physics2D.Raycast(mySpot, mySpot, k_GroundRayLength))
+            {
+                anim.SetTrigger("jump");
+                anim.SetBool("grounded", false);
+            }
+        }
+     }
+
+    public void MakeJump(float jumpForce)
+    {
+        // ... add force in upwards.
+        rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Force);
+    }
+    public void DiveKick()
+    {
+        rb.simulated = true;
+        rb.AddForce(transform.up * 4000, ForceMode2D.Force);
+    }
+
     public void SpinMove (int frame)
     {
         transform.position = new Vector3(transform.position.x + Input.GetAxis("Horiz" + player) * 0.1f * (15 - frame)/15f, this.transform.position.y); 

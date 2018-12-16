@@ -29,14 +29,12 @@ public class Puff : MonoBehaviour {
         }
     }
 	void OnTriggerEnter2D(Collider2D collid){
-        Debug.Log("I'm triggered");
 		if (collid.gameObject.layer == LayerMask.NameToLayer("ground")) {
-			Debug.Log("dumb");
 			Destroy (gameObject);
 		} else if(collid.gameObject.tag != gameObject.tag)
         {
-            Animator anim = collid.gameObject.GetComponentInParent<Animator>();
-            anim.SetInteger("hitstun", 50);
+            DamageTaker dt = collid.GetComponentInParent<DamageTaker>();
+            dt.TakeDamage(2, 50);
             Destroy(gameObject);
         }
 	}
