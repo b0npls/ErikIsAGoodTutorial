@@ -54,9 +54,9 @@ public class giver_input : MonoBehaviour {
 		}
 		if (Input.GetKey (controls.crouch)) {
 			crouching = true;
-			anim.SetBool ("crouch", true);
+			anim.SetBool ("crouching", true);
 		} else {
-			anim.SetBool ("crouch", false);
+			anim.SetBool ("crouching", false);
 		}
 		
 		if (Input.GetKey(controls.move_right))
