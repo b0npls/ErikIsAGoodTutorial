@@ -46,6 +46,11 @@ TagManager:
   - 
   - 
   - 
+  - andy1-Player
+  - andy2
+  - andy3
+  - andy4
+  - andy5
   m_SortingLayers:
   - name: Default
     uniqueID: 0
