@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Player1
   - Player2
+  - AttackP1
+  - AttackP2
+  - HitP1
+  - HitP2
   layers:
   - Default
   - TransparentFX
@@ -25,8 +29,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - player1
+  - player2
+  - p1 attack
+  - p2 attack
+  - b0n5
   - 
   - 
   - 
