@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 114187760531763200, guid: e3cf7f836e9af714c8f7f3565d90502d, type: 2}
-  a: {fileID: 114347750511371118, guid: e3556555cb40dbe4f8dec82d9443cc28, type: 2}
+  a: {fileID: 114347750511371118, guid: b13de22bcbb7844489c190a5232c856a, type: 2}
   player: P2
   health: 100
   isJumping: 0
