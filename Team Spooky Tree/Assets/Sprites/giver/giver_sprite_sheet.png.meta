@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: b31807187de000340a03546398f0d2dc
+timeCreated: 1551028506
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: giver_ss_and_they_would_play_hide_and_seek
+    21300002: giver_sprite_sheet_1
+    21300004: giver_ss_and_swing_from_her_branches
+    21300006: giver_ss_old_man_sitting_on_stump
+    21300008: giver_ss_old_man
+    21300010: giver_ss_stump
+    21300012: giver_ss_old_man_quote
+    21300014: giver_ss_tree
+    21300016: giver_ss_branchless
+    21300018: giver_ss_branchless_quote
+    21300020: giver_ss_guy_branches
+    21300022: giver_ss_tree_quote
+    21300024: giver_ss_apples
+    21300026: giver_sprite_sheet_14
+    21300028: giver_ss_apples_quotes
+    21300030: giver_ss_q_and_so_the_boy_cut_down_her_trunk
+    21300032: giver_ss_q_and_made_a_boat_and_sailed_away
+    21300034: giver_ss_tree_left
+    21300036: giver_stump_w_axe
+    21300038: giver_ss_guy_with_trunk
+    21300040: giver_ss_q_and_the_tree_was_happy...
+    21300042: giver_ss_q_but_not_really
+    21300044: giver_sprite_sheet_25
+    21300046: giver_sprite_sheet_26
+    21300048: giver_sprite_sheet_27
+    21300050: giver_sprite_sheet_28
+    21300052: giver_ss_quote_once_there_was_a_tree
+    21300054: giver_ss_small_stump
+    21300056: giver_sprite_sheet_31
+    21300058: giver_sprite_sheet_32
+    21300060: giver_sprite_sheet_33
+    21300062: giver_ss_apples_on_ground
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: giver_ss_and_they_would_play_hide_and_seek
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1255
+        width: 890
+        height: 536
+      alignment: 9
+      pivot: {x: 0.8662654, y: 0.14523725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 1760
+        width: 5
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_and_swing_from_her_branches
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1259
+        width: 662
+        height: 496
+      alignment: 9
+      pivot: {x: 0.18198434, y: 0.13031942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_old_man_sitting_on_stump
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 1333
+        width: 272
+        height: 285
+      alignment: 9
+      pivot: {x: 0.45006517, y: 0.26171318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_old_man
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 1486
+        width: 107
+        height: 259
+      alignment: 9
+      pivot: {x: 0.40479657, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_stump
+      rect:
+        serializedVersion: 2
+        x: 2097
+        y: 1492
+        width: 210
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_old_man_quote
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 675
+        width: 372
+        height: 538
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_tree
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 715
+        width: 403
+        height: 462
+      alignment: 9
+      pivot: {x: 0.2303753, y: 0.21335962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_branchless
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 740
+        width: 250
+        height: 477
+      alignment: 9
+      pivot: {x: 0.35059425, y: 0.17254306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_branchless_quote
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 993
+        width: 203
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_guy_branches
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 851
+        width: 326
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_tree_quote
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 858
+        width: 75
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_apples
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 5
+        width: 473
+        height: 660
+      alignment: 9
+      pivot: {x: 0.3205293, y: 0.33022076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 590
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_apples_quotes
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 247
+        width: 354
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_q_and_so_the_boy_cut_down_her_trunk
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 515
+        width: 281
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_q_and_made_a_boat_and_sailed_away
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 522
+        width: 269
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_tree_left
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 16
+        width: 325
+        height: 494
+      alignment: 9
+      pivot: {x: 0.3850721, y: 0.17006454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_stump_w_axe
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 350
+        width: 355
+        height: 110
+      alignment: 9
+      pivot: {x: 0.2704394, y: 0.6234758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_guy_with_trunk
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 347
+        width: 279
+        height: 163
+      alignment: 9
+      pivot: {x: 0.5, y: 0.60415894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_q_and_the_tree_was_happy...
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 234
+        width: 204
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_q_but_not_really
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 236
+        width: 120
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_quote_once_there_was_a_tree
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 93
+        width: 285
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_small_stump
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 104
+        width: 228
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 5
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 32
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: giver_ss_apples_on_ground
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 9
+        width: 428
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

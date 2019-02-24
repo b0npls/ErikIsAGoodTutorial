@@ -49,11 +49,11 @@ public class giver_input : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//TODO change this to Input.GetButtonDown instead
 		if (Input.GetKeyDown (controls.attack)) {
 			anim.SetTrigger ("attack");
 		}
 		if (Input.GetKey (controls.crouch)) {
-			crouching = true;
 			anim.SetBool ("crouching", true);
 		} else {
 			anim.SetBool ("crouching", false);
@@ -98,12 +98,12 @@ public class giver_input : MonoBehaviour {
 		}
 		if (Input.GetKey(controls.jump) && jumping == false) {
 			jumping = true;
-			anim.SetBool("jump", true);
+			anim.SetBool("jumping", true);
 			rb2d.AddForce(jumpHeight, ForceMode2D.Impulse);
 		}
 		if (rb2d.velocity.y == 0) {
 			jumping = false;
-			anim.SetBool ("jump", false);
+			anim.SetBool ("jumping", false);
 		}
 	}
 }
