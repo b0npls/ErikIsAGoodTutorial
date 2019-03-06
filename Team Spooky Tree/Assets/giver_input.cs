@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class giver_input : MonoBehaviour {
 
-	public float speed = 10f;
+	//public float speed = 10f;
 
 	private Rigidbody2D rb2d;
 
@@ -21,17 +21,18 @@ public class giver_input : MonoBehaviour {
 	const float move_step = 0.1f;
 	Vector2 jumpHeight = new Vector2(0,10);
 
+	public string player;
+
 	private struct Controls {
-		public KeyCode move_right, move_left, jump, attack, crouch;
-		public Controls(KeyCode right, KeyCode left, KeyCode jump_in, KeyCode attack_in, KeyCode crouch_in){
-			move_right = right;
-			move_left = left ;
+		public string x, y, jump, attack;
+		public Controls(string x_in, string y_in, string jump_in, string attack_in){
+			x = x_in;
+			y = y_in;
 			jump = jump_in;
 			attack = attack_in;
-			crouch = crouch_in;
 		}
 	}
-	Controls controls = new Controls(KeyCode.RightArrow, KeyCode.LeftArrow, KeyCode.UpArrow, KeyCode.RightControl, KeyCode.DownArrow); 
+	private Controls control;
 
 	// Use this for initialization
 	void Start () {
@@ -42,61 +43,48 @@ public class giver_input : MonoBehaviour {
 		rightMoving = false;
 		jumping = false;
 		crouching = false;
+
+		//Default to P2 on nonacceptable input
+		if (player != "P1") {
+			player = "P2";
+		}
+
+		control = new Controls ("Horiz" + player, "Vert" + player, "Jump" + player, "Fire1" + player);
 	}
 	void FixedUpdate() {
-		float moveHorizontal = Input.GetAxis ("HorizP2");
+		float moveHorizontal = Input.GetAxis ("Horiz" + player);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//TODO change this to Input.GetButtonDown instead
-		if (Input.GetKeyDown (controls.attack)) {
+		if (Input.GetButtonDown(control.attack)) {
 			anim.SetTrigger ("attack");
 		}
-		if (Input.GetKey (controls.crouch)) {
+		if (Input.GetAxis (control.y) < 0 && !jumping) {
 			anim.SetBool ("crouching", true);
 		} else {
 			anim.SetBool ("crouching", false);
 		}
 		
-		if (Input.GetKey(controls.move_right))
-		{
+		if (Input.GetAxis (control.x) > 0) {
 			leftMoving = false;
 			rightMoving = true;
-		} 
-		else {
-			rightMoving = false;
-		}
-
-		if (Input.GetKey(controls.move_left))
-		{
-			leftMoving = true;
-			rightMoving = false;
-		}
-		else {
-			leftMoving = false;
-		}
-
-		if (rightMoving)
-		{
 			anim.SetBool("move_right", true);
 			this.transform.position = new Vector3(this.transform.position.x + move_step, this.transform.position.y);
-		} else
-		{
-			anim.SetBool("move_right", false);
-		}
-		if (leftMoving)
-		{
+
+		} else if (Input.GetAxis (control.x) < 0) {
+			rightMoving = false;
 			leftMoving = true;
 			anim.SetBool("move_left", true);
 			transform.position = new Vector3(transform.position.x - move_step, transform.position.y);
 		}
-		else
-		{
+		 else {
 			leftMoving = false;
+			rightMoving = false;
+			anim.SetBool("move_right", false);
 			anim.SetBool("move_left", false);
 		}
-		if (Input.GetKey(controls.jump) && jumping == false) {
+		if ((Input.GetAxis(control.y) > 0 || Input.GetButtonDown(control.jump) ) && jumping == false) {
 			jumping = true;
 			anim.SetBool("jumping", true);
 			rb2d.AddForce(jumpHeight, ForceMode2D.Impulse);
