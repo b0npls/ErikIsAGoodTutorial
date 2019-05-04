@@ -185,7 +185,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393836696437356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5536169, y: -0.09534842, z: -0.062326983}
+  m_LocalPosition: {x: 0, y: 0, z: -0.062326983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4369123093332836}
@@ -214,7 +214,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61038523817311576
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -329,10 +329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b65293721d96804ea9eb43ee64c3cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p: {fileID: 114187760531763200, guid: e3cf7f836e9af714c8f7f3565d90502d, type: 2}
-  a: {fileID: 114347750511371118, guid: b13de22bcbb7844489c190a5232c856a, type: 2}
   player: P2
   health: 100
+  p: {fileID: 114187760531763200, guid: e3cf7f836e9af714c8f7f3565d90502d, type: 2}
+  a: {fileID: 114347750511371118, guid: b13de22bcbb7844489c190a5232c856a, type: 2}
   isJumping: 0
 --- !u!114 &114503519463301364
 MonoBehaviour:

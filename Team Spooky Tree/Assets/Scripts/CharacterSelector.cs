@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class CharacterSelector : MonoBehaviour {
 
 	//static so it stays even after the instances are gone. Public so any code can get to it.
-	public static string Player1Choice;	
-	public static string Player2Choice;
+	public static string Player1Choice = "Random";	
+	public static string Player2Choice = "Random";
 
 	public RectTransform selector;
 	public string LeftRightMovement;

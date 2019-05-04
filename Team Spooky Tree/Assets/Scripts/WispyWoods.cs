@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WispyWoods : MonoBehaviour, DamageTaker {
+public class WispyWoods : Fighter, DamageTaker {
     Rigidbody2D rb;
     public Puff p;
     public Apple a;
-    public string player;
-    public float health = 100;
+
     private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
 
     [HideInInspector] public bool isJumping = false;
     // Use this for initialization
     void Start () {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity.Set(-1, 5);
+
 	}
     public void summonApple()
     {
@@ -82,4 +80,18 @@ public class WispyWoods : MonoBehaviour, DamageTaker {
         anim.SetInteger("hitstun", hitstun);
         health -= damage;
     }
+
+    /*public override void SetFacingRight(bool direction)
+    {
+        if (facingRight == direction) return;
+        facingRight = direction;
+        if (facingRight)
+        {
+            transform.rotation = new Quaternion(transform.rotation.x, 180f, transform.rotation.z, transform.rotation.w);
+        }
+        else
+        {
+            transform.rotation = new Quaternion(transform.rotation.x, 0f, transform.rotation.z, transform.rotation.w);
+        }
+    }*/
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class giver_input : MonoBehaviour {
+public class giver_input : Fighter {
 
 	public float speed = 10f;
 

@@ -26,7 +26,7 @@ public class TreeOfLifeAttack : MonoBehaviour
             DamageTaker d = collid.GetComponentInParent<DamageTaker>();
             if (d != null)
             {
-                d.TakeDamage(1f, 50);
+                d.TakeDamage(15f, 50);
             }
             else
             {

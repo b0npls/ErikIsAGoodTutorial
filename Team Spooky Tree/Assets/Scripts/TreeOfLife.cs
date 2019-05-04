@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeOfLife : MonoBehaviour, DamageTaker {
+public class TreeOfLife : Fighter, DamageTaker {
     bool rightMoving;
     bool leftMoving;
-    public string player;
+
     Animator anim;
-    public float health = 100f;
 	// Use this for initialization
 	void Start () {
         

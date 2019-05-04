@@ -10,8 +10,7 @@ that selection should cause the correct String Names to be put into the variable
 
 // Attack button plans: Q, E, R, F| Jump: W
 
-public class BonMover : MonoBehaviour {
-
+public class BonMover : Fighter {
 	public string xMove, yMove, attack1, attack2, attack3, attack4;
 	public float jumpForce = 100f;
 
@@ -24,6 +23,12 @@ public class BonMover : MonoBehaviour {
     private Jumper jumpScr;
 	
 	void Start () {
+        xMove = "Horiz" + player;
+        yMove = "Vert" + player;
+        attack1 = "Fire1" + player;
+        attack2 = "Fire2" + player;
+        attack3 = "Fire3" + player;
+        attack4 = "Fire4" + player;
         anim = GetComponent<Animator>();
         jumpScr = GetComponentInChildren<Jumper>();
 	}
@@ -33,44 +38,26 @@ public class BonMover : MonoBehaviour {
 		//anim.ResetTrigger("attack1");
 		Attacks();
         
-        //Basically, if you're holding down one direction and you press another, you switch to moving in the new direction
-        //if you release that new direction and you're still holding the old one, you should switch back
-		if (Input.GetKeyDown(KeyCode.D) && allowedToMove == true)
-        {
-            leftMoving = false;
-            rightMoving = true;
-        }
-		if (Input.GetKeyDown(KeyCode.A) && allowedToMove == true)
-        {
-            leftMoving = true;
-            rightMoving = false;
-        }
 
-		if (Input.GetKey(KeyCode.D) && !leftMoving && allowedToMove == true)
+
+        if (Input.GetAxis("Horiz" + player) > 0)
         {
-            rightMoving = true;
             anim.SetBool("isWalkingForward", true);
+            anim.SetBool("isWalkingBackward", false);
             this.transform.position = new Vector3(this.transform.position.x + 0.05f, this.transform.position.y);
-        } else
+        } else if (Input.GetAxis("Horiz" + player) < 0)
         {
-            rightMoving = false;
             anim.SetBool("isWalkingForward", false);
-        }
-
-		if (Input.GetKey(KeyCode.A) && !rightMoving && allowedToMove == true)
-        {
-            leftMoving = true;
             anim.SetBool("isWalkingBackward", true);
             transform.position = new Vector3(transform.position.x - 0.05f, transform.position.y);
-        }
-        else
+        } else
         {
-            leftMoving = false;
+            anim.SetBool("isWalkingForward", false);
             anim.SetBool("isWalkingBackward", false);
         }
 
-        if (Input.GetButtonDown(yMove)){
-        	if (Input.GetAxis(yMove) > 0){
+        if (Input.GetButtonDown("Vert" + player)){
+        	if (Input.GetAxis("Vert" + player) > 0){
         		if (timeSinceLastJump > jumpDelay){
         			jumpScr.isJumping = true;
         			timeSinceLastJump = 0f;
@@ -94,20 +81,20 @@ public class BonMover : MonoBehaviour {
 		anim.ResetTrigger("attack2");
 		anim.ResetTrigger("attack3");
 		anim.ResetTrigger("attack4");
-		if (Input.GetButtonDown(attack1))
+		if (Input.GetButtonDown("Fire1" + player))
         {
             anim.SetTrigger("attack1");
         }
-		if (Input.GetButtonDown(attack2))
+		if (Input.GetButtonDown("Fire2" + player))
         {
             anim.SetTrigger("attack2");
         }
-		if (Input.GetButtonDown(attack3))
+		if (Input.GetButtonDown("Fire3" + player))
         {
         	// Movement needs to be disabled during. Perhaps a bool to set false?
             anim.SetTrigger("attack3");
         }
-		if (Input.GetButtonDown(attack4))
+		if (Input.GetButtonDown("Fire4" + player))
         {
             anim.SetTrigger("attack4");
         }

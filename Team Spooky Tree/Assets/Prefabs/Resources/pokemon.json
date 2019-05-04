@@ -1,0 +1,21 @@
+{"pokemon":[
+		{
+			"id":"1",
+			"atk":4,
+			"def":7,
+			"name":"bulby"
+		},
+		{
+			"id":"2",
+			"atk":5,
+			"def":1,
+			"name":"squir"
+		},
+		{
+			"id":"3",
+			"atk":1,
+			"def":10,
+			"name":"char"
+		}
+	]
+}
