@@ -52,7 +52,8 @@ public class giver_input : MonoBehaviour {
 		control = new Controls ("Horiz" + player, "Vert" + player, "Jump" + player, "Fire1" + player);
 	}
 	void FixedUpdate() {
-		float moveHorizontal = Input.GetAxis ("Horiz" + player);
+		//float moveHorizontal = Input.GetAxis ("Horiz" + player);
+		float moveHorizontal = Input.GetAxis (control.x);
 	}
 	
 	// Update is called once per frame

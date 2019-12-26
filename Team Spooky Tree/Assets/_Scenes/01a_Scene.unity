@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71abc17fa4f619648803797d1e2ab863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: P1
   speed: 5
 --- !u!50 &698689003
 Rigidbody2D:
@@ -781,6 +782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1162586463}
   - component: {fileID: 1162586464}
+  - component: {fileID: 1162586465}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -826,6 +828,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.872921, y: 1.0832434}
   m_EdgeRadius: 0
+--- !u!114 &1162586465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162586462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380781b4a8276064cad4a13c4be9af40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1374776529
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374776530}
   - component: {fileID: 1374776531}
+  - component: {fileID: 1374776532}
   m_Layer: 0
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -880,6 +894,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1295404, y: 4.953409}
   m_EdgeRadius: 0
+--- !u!114 &1374776532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1374776529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a22a53cd8d41544180c5f9fa1a1aa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663638326
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +1009,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.96952677, y: 1.6392069}
+  m_Offset: {x: 0.98440456, y: 1.6094532}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -995,7 +1020,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.701518, y: 5.0031166}
+  m_Size: {x: 1.7921982, y: 4.943609}
   m_EdgeRadius: 0
 --- !u!4 &1781600805
 Transform:
@@ -1062,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4353b1161f6bc8743bfbd963d799bc92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 
+  player: P2
 --- !u!1 &1786768387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1786768388}
   - component: {fileID: 1786768389}
+  - component: {fileID: 1786768390}
   m_Layer: 0
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -1117,6 +1143,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4624805, y: 3.0387974}
   m_EdgeRadius: 0
+--- !u!114 &1786768390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1786768387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b97aaf1e7c6ddd42aadf0ff535f919d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1838433664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876016768}
   - component: {fileID: 1876016769}
+  - component: {fileID: 1876016770}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -1244,6 +1282,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1876016770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876016767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6820582d3ef174fb59a583e77fd9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1908370053
 GameObject:
   m_ObjectHideFlags: 0
