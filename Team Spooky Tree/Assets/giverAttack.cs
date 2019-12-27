@@ -14,10 +14,12 @@ public class giverAttack : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D(Collider2D collid) {
+		//Debug.Log ("giverAttack - collid.gameObjectTag: " + collid.gameObject.tag + ", myTag: " + gameObject.tag);
+
 		if (collid.gameObject.tag != gameObject.tag){
 			//Debug.Log("giver's attack is doing damage to : "+collid.name);
 			DamageTaker d = collid.GetComponentInChildren<DamageTaker> ();
-			Debug.Log ("giverAttack: is doing damage to - d " + d.ToString ());
+			//Debug.Log ("giverAttack: is doing damage to - d " + d.ToString ());
 			if (d != null) {
 				d.TakeDamage (5f, 100);
 			} else {

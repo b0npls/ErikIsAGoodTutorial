@@ -15,12 +15,14 @@ public class treeAttack : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D collid)
 	{
-		Debug.Log ("inside tree's on trigger enter 2d");
+		//Debug.Log ("treeAttack - collid: " + collid.ToString());
+		//Debug.Log ("treeAttack - collid.gameObjectTag: " + collid.gameObject.tag + ", myTag: " + gameObject.tag);
 		if (collid.gameObject.tag != gameObject.tag) {
-			DamageTaker d = collid.GetComponentInParent<DamageTaker> ();
-			Debug.Log("tree's attack is doing damage to : "+collid.name);
+			DamageTaker d = collid.GetComponentInChildren<DamageTaker> ();
+			//Debug.Log("tree's attack is doing damage to : "+d.ToString());
+
 			if (d != null) {
-				d.TakeDamage (1f, 50);
+				d.TakeDamage (5f, 50);
 			} else {
 				Debug.Log ("oops treeAttack's damagee is null");
 			}

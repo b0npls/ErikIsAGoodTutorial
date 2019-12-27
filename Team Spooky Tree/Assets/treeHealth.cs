@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeHealth : MonoBehaviour, DamageTaker {
+public class treeHealth : MonoBehaviour, DamageTaker {
 	private float health;
 
 	public void TakeDamage(float damage, int hitstun){
 		health -= damage;
 		//TODO do something with hitstun
 
-		print ("Tree: Took -" + damage + "- damage. Now  "+ health +" health.");
+		print ("Tree: Took " + damage + " damage. Now  "+ health +" health.");
 		if (health <= 0) {
 			print ("Tree: oops my health is "+ health +" and I am dead");
 		}

@@ -17,7 +17,7 @@ public class giverHealth : MonoBehaviour, DamageTaker {
 		health -= damage;
 		//TODO do something with hitstun
 
-		print ("giver: Took" + damage + " damage. Now  "+ health +" health.");
+		print ("giver: Took " + damage + " damage. Now  "+ health +" health.");
 		if (health <= 0) {
 			print ("giver: oops my health is "+ health +" and I am dead");
 		}
