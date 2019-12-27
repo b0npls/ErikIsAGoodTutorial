@@ -9,7 +9,7 @@ public class treeHealth : MonoBehaviour, DamageTaker {
 		health -= damage;
 		//TODO do something with hitstun
 
-		print ("Tree: Took " + damage + " damage. Now  "+ health +" health.");
+		print ("Tree: Took d" + damage + " damage. Now  "+ health +" health.");
 		if (health <= 0) {
 			print ("Tree: oops my health is "+ health +" and I am dead");
 		}
