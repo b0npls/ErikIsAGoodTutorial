@@ -58,6 +58,9 @@ public class giver_input : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (anim.GetBool ("dead")) {
+			return;
+		}
 		if (Input.GetButtonDown(control.attack)) {
 			anim.SetTrigger ("attack");
 		}

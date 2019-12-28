@@ -65,6 +65,10 @@ public class Tree_input : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (anim.GetBool ("dead")) {
+			//if we are dead we shouldn't be able to do anything
+			return;
+		}
 		if (Input.GetButtonDown (control.attack)) {
 			anim.SetTrigger ("attack");
 		}
